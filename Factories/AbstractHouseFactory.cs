@@ -13,7 +13,7 @@ namespace ClassLibrarygg3.Factories
         // Базовая логика (общая для всех фабрик)
         public string GetHouseInfo(IHouse house)
         {
-            return $"Дом типа: {house.GetType().Name}, Площадь: {house.GetArea()} м², Стоимость: {house.CalculateCost()} $";
+            return $"Дом типа: {house.GetType().Name}, Площадь: {house.CalculateArea()} м², Стоимость: {house.CalculateCost()} $";
         }
     }
 }

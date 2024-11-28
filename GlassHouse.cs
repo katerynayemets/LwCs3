@@ -12,7 +12,6 @@ namespace ClassLibrarygg3
         private int floors;
         private double costPerSquareMeter = 1500;
         private double complexityMultiplier = 1.5;
-        private double materialWeightPerSquareMeter = 50;
 
         public GlassHouse(double baseArea, int floors, double complexityMultiplier = 1.5)
         {
@@ -21,6 +20,8 @@ namespace ClassLibrarygg3
             this.complexityMultiplier = complexityMultiplier;
         }
 
+        public GlassHouse() : this(100, 3) { } // Конструктор по умолчанию
+
         public void Build()
         {
             Console.WriteLine($"Будується скляний будинок з {floors} поверхами, площею {CalculateArea()} м².");
@@ -28,7 +29,7 @@ namespace ClassLibrarygg3
 
         public double CalculateCost()
         {
-            return CalculateArea() * costPerSquareMeter * complexityMultiplier;
+            return baseArea * floors * costPerSquareMeter * complexityMultiplier;
         }
 
         public double CalculateArea()
@@ -38,12 +39,12 @@ namespace ClassLibrarygg3
 
         public double CalculateBuildTime()
         {
-            return floors * 4 * complexityMultiplier; // Дольше, чем каменный и деревянный дома.
+            throw new NotImplementedException();
         }
 
         public double CalculateWeight()
         {
-            return CalculateArea() * materialWeightPerSquareMeter;
+            throw new NotImplementedException();
         }
     }
 }

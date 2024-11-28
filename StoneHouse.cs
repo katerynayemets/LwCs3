@@ -8,11 +8,10 @@ namespace ClassLibrarygg3
 {
     public class StoneHouse : IHouse
     {
-        private double baseArea; // Площадь одного этажа.
-        private int floors; // Количество этажей.
-        private double costPerSquareMeter = 1200; // Стоимость за квадратный метр.
-        private double complexityMultiplier = 1.2; // Коэффициент сложности.
-        private double materialWeightPerSquareMeter = 200; // Вес материала за квадратный метр.
+        private double baseArea; // Площадь одного этажа
+        private int floors; // Количество этажей
+        private double costPerSquareMeter = 1200; // Стоимость за квадратный метр
+        private double complexityMultiplier = 1.2; // Коэффициент сложности
 
         public StoneHouse(double baseArea, int floors, double complexityMultiplier = 1.2)
         {
@@ -21,14 +20,16 @@ namespace ClassLibrarygg3
             this.complexityMultiplier = complexityMultiplier;
         }
 
+        public StoneHouse() : this(100, 1) { } // Конструктор по умолчанию
+
         public void Build()
         {
-            Console.WriteLine($"Будується кам'яний будинок з {floors} поверхами, площею {CalculateArea()} м².");
+            Console.WriteLine($"Строится каменный дом с {floors} этажами, площадью {CalculateArea()} м².");
         }
 
         public double CalculateCost()
         {
-            return CalculateArea() * costPerSquareMeter * complexityMultiplier;
+            return baseArea * floors * costPerSquareMeter * complexityMultiplier;
         }
 
         public double CalculateArea()
@@ -38,12 +39,13 @@ namespace ClassLibrarygg3
 
         public double CalculateBuildTime()
         {
-            return floors * 3 * complexityMultiplier; // Пример: 3 недели на этаж с учетом сложности.
+            throw new NotImplementedException();
         }
 
         public double CalculateWeight()
         {
-            return CalculateArea() * materialWeightPerSquareMeter;
+            throw new NotImplementedException();
         }
     }
+
 }

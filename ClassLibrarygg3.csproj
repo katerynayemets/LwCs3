@@ -41,11 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factories\AbstractHouseFactory.cs" />
+    <Compile Include="Factories\GlassHouseFactory.cs" />
+    <Compile Include="Factories\IHouseFactory.cs" />
+    <Compile Include="Factories\StoneHouseFactory.cs" />
+    <Compile Include="Factories\WoodenHouseFactory.cs" />
+    <Compile Include="GlassHouse.cs" />
     <Compile Include="IHouse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StoneHouse.cs" />
+    <Compile Include="WoodenHouse.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
