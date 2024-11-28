@@ -10,10 +10,10 @@ namespace ClassLibrarygg3.Factories
     {
         public abstract IHouse CreateHouse();
 
-        // Базовая логика (общая для всех фабрик)
+        
         public string GetHouseInfo(IHouse house)
         {
-            return $"Дом типа: {house.GetType().Name}, Площадь: {house.CalculateArea()} м², Стоимость: {house.CalculateCost()} $";
+            return $"Дім типу: {house.GetType().Name}, Площа: {house.CalculateArea()} м2, Вартість: {house.CalculateCost()} $";
         }
     }
 }

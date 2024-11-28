@@ -8,10 +8,10 @@ namespace ClassLibrarygg3
 {
     public class StoneHouse : IHouse
     {
-        private double baseArea; // Площадь одного этажа
-        private int floors; // Количество этажей
-        private double costPerSquareMeter = 1200; // Стоимость за квадратный метр
-        private double complexityMultiplier = 1.2; // Коэффициент сложности
+        private double baseArea; 
+        private int floors; 
+        private double costPerSquareMeter = 1200; 
+        private double complexityMultiplier = 1.2; 
 
         public StoneHouse(double baseArea, int floors, double complexityMultiplier = 1.2)
         {
@@ -20,11 +20,11 @@ namespace ClassLibrarygg3
             this.complexityMultiplier = complexityMultiplier;
         }
 
-        public StoneHouse() : this(100, 1) { } // Конструктор по умолчанию
+        public StoneHouse() : this(100, 1) { } 
 
         public void Build()
         {
-            Console.WriteLine($"Строится каменный дом с {floors} этажами, площадью {CalculateArea()} м².");
+            Console.WriteLine($"Будується кам'яний будинок з {floors} поверхами, площею {CalculateArea()} м2.");
         }
 
         public double CalculateCost()

@@ -8,6 +8,6 @@ namespace ClassLibrarygg3.Factories
 {
     public interface IHouseFactory
     {
-        IHouse CreateHouse(); // Метод для создания дома
+        IHouse CreateHouse(); 
     }
 }

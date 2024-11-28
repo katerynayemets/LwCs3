@@ -20,11 +20,11 @@ namespace ClassLibrarygg3
             this.complexityMultiplier = complexityMultiplier;
         }
 
-        public GlassHouse() : this(100, 3) { } // Конструктор по умолчанию
+        public GlassHouse() : this(100, 3) { } 
 
         public void Build()
         {
-            Console.WriteLine($"Будується скляний будинок з {floors} поверхами, площею {CalculateArea()} м².");
+            Console.WriteLine($"Будується скляний будинок з {floors} поверхами, площею {CalculateArea()} м2.");
         }
 
         public double CalculateCost()

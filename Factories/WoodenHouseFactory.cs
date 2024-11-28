@@ -10,7 +10,7 @@ namespace ClassLibrarygg3.Factories
     {
         public override IHouse CreateHouse()
         {
-            // Создаем деревянный дом с фиксированными параметрами
+            
             return new WoodenHouse(80, 1);
         }
     }
