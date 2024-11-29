@@ -8,11 +8,10 @@ namespace ClassLibrarygg3
 {
     public interface IHouse
     {
-        void Build(); // Выводит процесс строительства.
-        double CalculateCost(); // Рассчитывает стоимость дома.
-        double CalculateArea(); // Рассчитывает общую площадь дома.
-        double CalculateBuildTime(); // Рассчитывает время строительства.
-        double CalculateWeight(); // Рассчитывает общий вес дома.
+        void Build(); 
+        double CalculateCost(); 
+        double CalculateArea(); 
+        
     }
 
 }
